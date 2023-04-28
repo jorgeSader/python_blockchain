@@ -35,16 +35,21 @@ add_value(get_transaction_value())
 
 while True:
   print('Please Choose: ')
-  print('1: Add a new transaction value')
-  print('2: Output the blockchain blocks')
-  print("Press 'Ctrl + D' to exit.")
+  print('1: Add a new transaction value.')
+  print('2: Output the blockchain blocks.')
+  print("x: Exit.")
   
   user_choice = get_user_choice()
   
   if user_choice == '1':
     add_value(get_transaction_value(), get_last_blockchain_value())
-  else:
+  elif user_choice=='2':
     print_blockchain_elements()
+  elif user_choice == 'x':
+    break
+  else:
+    print('Sorry please enter a valid option.')
+    
   
   
   
